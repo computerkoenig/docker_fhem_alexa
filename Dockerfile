@@ -24,7 +24,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     *) echo "unsupported architecture"; exit 1 ;; \
   esac \
   && if [ "$ARCH" = "amd64" ]; then \
-    curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get install -y nodejs ; fi \
   && if [ "$ARCH" = "arm64" ]; then \
     wget https://nodejs.org/dist/v14.6.0/node-v14.6.0-linux-arm64.tar.xz \
